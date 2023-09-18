@@ -81,7 +81,7 @@
           
           <div class="modal-body slickcar">
             <div class="d-flex" v-for="(file, index) in onlyimages" :key="file.name">
-              <img :src="'/files/' + file.url" :alt="file.name" class='img-fluid mx-auto'>
+              <img :data-lazy="'/files/' + file.url" :alt="file.name" class='img-fluid mx-auto'>
             </div>
           </div>
 
