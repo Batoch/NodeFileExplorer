@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   server:
-    image: batoch/chatserver
+    image: ghcr.io/batoch/nodefileexplorer:latest
     hostname: nodeexplorer_server
     restart: always
     container_name: nodeexplorer_server_container
@@ -13,7 +13,7 @@ services:
     networks:
       - net
   reverse-proxy:
-    image: ghcr.io/batoch/nodefileexplorer:latest
+    image: nginx
     restart: always
     container_name: nodeexplorer_nginx_container
     volumes:
