@@ -5,7 +5,6 @@ services:
     hostname: nodeexplorer_server
     restart: always
     container_name: nodeexplorer_server_container
-    command: npm start
     volumes:
       - ${NODEXPLORER_FOLDER:-./share}:/share
       - ./conf:/conf
