@@ -1,11 +1,7 @@
 version: "3.4"
 services:
   server:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        buildno: 1
+    image: batoch/chatserver
     hostname: nodeexplorer_server
     restart: always
     container_name: nodeexplorer_server_container
@@ -17,7 +13,7 @@ services:
     networks:
       - net
   reverse-proxy:
-    image: nginx
+    image: ghcr.io/batoch/nodefileexplorer:latest
     restart: always
     container_name: nodeexplorer_nginx_container
     volumes:
